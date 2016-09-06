@@ -21,10 +21,14 @@ class ProductsController < ApplicationController
 
   end
   #
-  def create
-    @product = Product.new(product_params)
-    @product.save
-    redirect_to products_url
+  def update
+    @product = Product.find(params[:id])
+
+    if @product.update_attributes(product_params)
+      redirect_to product_url(@product)
+    else
+      render :edit
+    end
   end
 
   # def delete
