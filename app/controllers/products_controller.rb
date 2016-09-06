@@ -4,12 +4,18 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
   #
-  # def show
-  #   @product = Picture.find(params[:id])
-  # end
-  #
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+
+  def update
+    @product = Location.find(params[:id])
+  end
+
   def new
-    @params = params
     @product = Product.new
   end
   #
@@ -30,9 +36,9 @@ class ProductsController < ApplicationController
 
   def product_params
         params.require(:product).permit(:name, :description, :price_in_cents)
-    end
+  end
 
 
-
+end
 
 end

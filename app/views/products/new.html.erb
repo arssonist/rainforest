@@ -1,31 +1,7 @@
 
-<% @params.each do |key, value| %>
-    <p><%=key %> = <%= value %> </p>
-    <% end %>
-<h1>Add a product</h1>
-
-<%= link_to "Back to Main Products Page", products_url %>
-
-<p>Fill in the form below to create new product</p>
-
-  <%= form_for @product do |f| %>
-<p>
-
-  <%= f.label (:name) %><br>
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.label :description %><br>
-  <%= f.text_field :description %>
-</p>
-<p>
-  <%= f.label :price_in_cents%><br>
-  <%= f.number_field :price_in_cents%>
-</p>
-
-  <p>
-      <%= f.submit "Save" %>
-  </p>
+<h1>Add a New Product</h1>
 
 
-<%end%>
+<%= link_to "Show all Products", products_path %>
+
+<%= render 'form'%>

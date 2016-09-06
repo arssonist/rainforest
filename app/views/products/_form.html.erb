@@ -1,0 +1,23 @@
+
+<%= link_to "Back to Main Products Page", products_path %>
+
+<p>Fill in the form below</p>
+
+<%= form_for (@product) do |f| %>
+<p>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+</p>
+<p>
+  <%= f.label :price_in_cents%><br>
+  <%= f.number_field :price_in_cents%>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+  <% end %>
