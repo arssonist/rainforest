@@ -2,4 +2,10 @@
 
 <h1> <%= @product.name %></h1>
 
+<%= link_to 'Back to Products',  products_path %></br>
+
+
+<%= link_to 'Edit',  edit_product_path %>
+
+
 <%= render 'product', product: @product %>

@@ -1,8 +1,11 @@
 <p>This is the partial for both the index and show pages</p>
 
 
+
 <div class="product">
+
   <h3>Name: <%= product.name%></h3>
 <h3>Description: <%= product.description %><br />
 <h3>Price in Cents: <%= product.price_in_cents %>
+<%= link_to 'Show Product info',  product %>
 </div>
